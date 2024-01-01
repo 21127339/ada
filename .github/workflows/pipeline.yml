@@ -1,0 +1,12 @@
+name: Pipeline
+on:
+  push:
+    branches:
+      - main
+      - feature/todo-list
+
+jobs:
+  trigger-jenkins-workflow:
+    name: Trigger jenkins workflow
+    uses: ./.github/workflows/trigger-jenkins.yml
+    secrets: inherit
